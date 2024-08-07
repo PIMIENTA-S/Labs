@@ -1,32 +1,46 @@
 public class Metodos {
 
-    private Nodo inico;
+    private Nodo inicio;
     private Nodo fin;
 
 
     public void Metodos(){
-        inico = null;
+        inicio = null;
         fin = null;
     }
 
     public void insertarInicio(String c){
-        Nodo nuevo = new Nodo(c, inico);
+        Nodo nuevo = new Nodo(c, inicio);
 
-        inico = nuevo;
+        inicio = nuevo;
 
         if (fin == null){
-            fin = inico;
+            fin = inicio;
         }
 
     }
 
+    public void insertarFinal(String c){
+
+        Nodo n = new Nodo(c, null);
+        if (inicio == null){
+            fin = n;
+            inicio = fin;
+        }else{
+            fin.setSiguiente(n);
+            fin = n;
+        }
+
+
+    }
+
     public void eliminarInicio(){
-        inico = inico.getSiguiente();
+        inicio = inicio.getSiguiente();
     }
 
     public void mostrarList(){
 
-        Nodo temp = inico;
+        Nodo temp = inicio;
 
         while (temp != null){
             System.out.println(temp.getContiene());
