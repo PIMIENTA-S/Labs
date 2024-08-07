@@ -19,6 +19,16 @@ public class Main {
         p3.setSiguiente(p4);
         p4.setSiguiente(p5);
 
+        Nodo aux = p1;
+
+        for (int i = 0; i < 5; i++){
+
+            String aux2 = (String)aux.getContiene();
+            System.out.println(aux2);
+            aux = aux.getSiguiente();
+
+        }
+
 
 
     }
