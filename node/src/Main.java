@@ -7,6 +7,12 @@ public class Main {
         String persona4 = "Martinez";
         String persona5 = "Bita";
 
+        String testing = "Inicio";
+        Metodos t1 = new Metodos();
+
+        t1.insertarInicio("hola");
+        t1.mostrarList();
+
 
         Nodo p1 = new Nodo(persona1);
         Nodo p2 = new Nodo(persona2);
@@ -19,15 +25,24 @@ public class Main {
         p3.setSiguiente(p4);
         p4.setSiguiente(p5);
 
+
+
         Nodo aux = p1;
-
-        for (int i = 0; i < 5; i++){
-
-            String aux2 = (String)aux.getContiene();
-            System.out.println(aux2);
+        
+        while (aux.getSiguiente() != null){
+            System.out.println(aux.getContiene());
             aux = aux.getSiguiente();
-
         }
+
+//        for (int i = 0; i < 5; i++){
+//
+//            String aux2 = (String)aux.getContiene();
+//            System.out.println(aux2);
+//            aux = aux.getSiguiente();
+//
+//        }
+
+
 
 
 

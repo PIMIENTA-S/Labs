@@ -15,7 +15,7 @@ public class Nodo {
 
     public Nodo(String c,Nodo s){
         setSiguiente(s);
-        setContiene(null);
+        setContiene(c);
     }
 
 
