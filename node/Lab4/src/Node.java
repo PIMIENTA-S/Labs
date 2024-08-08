@@ -5,15 +5,13 @@ public class Node {
 
 
     public Node(){
-        Node a = new Node();
-        a.setNext(null);
-        a.setData(null);
+        data = null;
+        next = null;
     }
 
     public Node(Object e){
-        Node nuevo = new Node();
-        nuevo.setData(e);
-        nuevo.setNext(null);
+        data = e;
+        next = null;
 
     }
 
