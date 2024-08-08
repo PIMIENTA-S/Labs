@@ -12,12 +12,16 @@ public class List {
     }
 
     public int size(){
-        return 3;
+        return size;
 
     }
 
     public Boolean isEmpty(){
-        return true;
+        if (size == 0){
+            return true;
+        } else{
+            return false;
+        }
 
     }
 
@@ -92,5 +96,13 @@ public class List {
             return temp.getData();
         }
 
+    }
+    public void mostrarList(){
+        Node temp = head;
+        while(temp != tail){
+            System.out.println(temp.getData());
+            temp = temp.getNext();
+        }
+        System.out.println(temp.getData());
     }
 }
