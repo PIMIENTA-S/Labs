@@ -11,7 +11,13 @@ public class Main {
         Metodos t1 = new Metodos();
 
         t1.insertarInicio("hola");
+        t1.insertarFinal("que mas");
+        t1.insertarFinal("Todo firme que?");
+        
+        t1.eliminarInicio();
         t1.mostrarList();
+
+
 
 
         Nodo p1 = new Nodo(persona1);
