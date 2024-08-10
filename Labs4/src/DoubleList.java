@@ -17,7 +17,7 @@ public class DoubleList {
         return size;
     }
 
-    public Boolean isEmpty(){
+    public boolean isEmpty(){
         if (size == 0){
             return true;
         }
@@ -47,21 +47,47 @@ public class DoubleList {
 
     }
 
-    public void addLast(){
-        
+    public void addLast(Object e){
+        DoubleNode n = new DoubleNode(e);
+
+        if (isEmpty()){
+            head = n;
+        } else{
+            tail.setNext(n);
+            n.setPrev(tail);
+        }
+        tail = n;
+        size ++;
 
     }
 
-    public void removeFirst(){
+    public Object removeFirst(){
+        DoubleNode temp = head;
+        if (isEmpty()){
+            return null;
+        }else {
+            head = head.getNext();
+            temp.setNext(null);
+            head.setPrev(null);
+            size --;
+            return temp.getData();
+        }
 
     }
 
-    public void removeLast(){
+    public Object removeLast(){
+        DoubleNode temp = tail;
 
+        if(isEmpty()){
+            return null;
+        }else{
+            tail = temp.getPrev();
+            tail.setNext(null);
+            temp.setPrev(null);
+            size --;
+            return temp.getData();
+        }
     }
-
-
-
 
     public int getSize() {
         return size;
