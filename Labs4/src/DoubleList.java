@@ -89,6 +89,61 @@ public class DoubleList {
         }
     }
 
+
+
+    public Object remove(DoubleNode n){
+        if (n == head){
+            removeFirst();
+        } else if(n == tail){
+            removeLast();
+        }
+        else{
+            Object e = n.getData();
+            DoubleNode p = n.getPrev();
+            DoubleNode nx = n.getNext();
+            p.setNext(nx);
+            nx.setPrev(p);
+            n.setNext(null);
+            n.setPrev(null);
+            size --;
+            return e;
+        }
+        return null;
+    }
+
+    public Object addBefore(DoubleNode n, Object e){
+        if (n==head){
+            addFirst(n);
+        }else{
+            DoubleNode m = new DoubleNode(e);
+            DoubleNode p = n.getPrev();
+            p.setNext(m);
+            m.setPrev(p);
+            m.setNext(n);
+            n.setPrev(m);
+            size ++;
+            return e;
+        }
+
+        return e;
+    }
+
+    public Object addAfter(DoubleNode n, Object e){
+        if (n==tail){
+            addLast(n);
+        }else{
+            DoubleNode m = new DoubleNode(e);
+            DoubleNode nx = n.getNext();
+            n.setNext(m);
+            m.setPrev(n);
+            m.setNext(nx);
+            nx.setPrev(m);
+            size ++;
+            return e;
+        }
+        return e;
+    }
+
     public int getSize() {
         return size;
     }
