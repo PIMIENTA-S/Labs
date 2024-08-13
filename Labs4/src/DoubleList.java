@@ -144,6 +144,15 @@ public class DoubleList {
         return e;
     }
 
+    public void showList(){
+        DoubleNode a = head;
+        while (a != tail){
+            System.out.println(a.getData());
+            a = a.getNext();
+        }
+        System.out.println(a.getData());
+    }
+
     public int getSize() {
         return size;
     }
