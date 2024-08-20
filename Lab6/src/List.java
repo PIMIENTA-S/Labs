@@ -38,7 +38,7 @@ public class List {
 
     }
 
-    public void addFirst(User e){
+    public void addFirst(Object e){
         Node n = new Node(e);
         if (isEmpty()){
             head = n;
@@ -50,14 +50,14 @@ public class List {
         size++;
     }
 
-    public void addLast(User e){
-        Node n =  new Node(e);
+    public void addLast(Object n){
+        Node e = new Node(n);
         if (isEmpty()){
-            head = n;
-            tail = n;
+            head = e;
+            tail = e;
         } else{
-            tail.setNext(n);
-            tail = n;
+            tail.setNext(e);
+            tail = e;
         }
         size++;
 
@@ -97,42 +97,6 @@ public class List {
         }
 
     }
-
-    public void sort(){
-        if(head == null ){
-            return;
-        }
-        boolean intercambio;
-
-        do{
-            intercambio = false;
-            Node current = head;
-            Node previous = null;
-
-            while (current != null && current.getNext() != null){
-                Node next = current.getNext();
-
-                if (current.getData().getCedula() > next.getData().getCedula()){
-                    if (previous != null){
-                        previous.setNext(next);
-                    } else {
-                        head = next;
-                    }
-                    current.setNext(next.getNext());
-                    next.setNext(current);
-
-                    intercambio = true;
-                }
-
-                previous = current;
-                current = current.getNext();
-            }
-            if (previous != null){
-                tail = previous;
-            }
-        } while (intercambio);
-    }
-
 
     public void mostrarList(){
         Node temp = head;
