@@ -1,4 +1,3 @@
-import javax.imageio.IIOException;
 import java.io.*;
 import java.util.Objects;
 
@@ -131,7 +130,7 @@ public class Reader {
     static void elimiarUsuario(String u){
         try{
             // actualizar el archivo password
-            BufferedReader lector = new BufferedReader(new FileReader("lab 5/Password.txt"));
+            BufferedReader lector = new BufferedReader(new FileReader("Lab 5/Password.txt"));
             StringBuilder contenido = new StringBuilder();
             String line;
             while ((line= lector.readLine()) != null){
@@ -141,13 +140,13 @@ public class Reader {
             }
             lector.close();
 
-            BufferedWriter escribir = new BufferedWriter(new FileWriter("lab 5/Password.txt"));
+            BufferedWriter escribir = new BufferedWriter(new FileWriter("Lab 5/Password.txt"));
             escribir.write(contenido.toString());
             escribir.close();
 
 
             // actualizar archivo Empleados
-            BufferedReader lector1 = new BufferedReader(new FileReader("lab 5/Empleados.txt"));
+            BufferedReader lector1 = new BufferedReader(new FileReader("Lab 5/Empleados.txt"));
             StringBuilder contenido1 = new StringBuilder();
             String line1;
             while ((line1=lector1.readLine()) != null){
@@ -157,7 +156,7 @@ public class Reader {
                 }
             }
             lector1.close();
-            BufferedWriter escribir1 = new BufferedWriter(new FileWriter("lab 5/Empleados.txt"));
+            BufferedWriter escribir1 = new BufferedWriter(new FileWriter("Lab 5/Empleados.txt"));
             escribir1.write(contenido1.toString());
             escribir1.close();
             System.out.println("Usuario eliminado correctamente.");
