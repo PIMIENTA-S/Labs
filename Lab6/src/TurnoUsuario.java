@@ -25,11 +25,11 @@ public class TurnoUsuario {
 
     public void toFile() {
         try{
-            File file = new File("Lab 6/src/usuariopendientes.txt");
+            File file = new File("Lab6/src/usuariopendientes.txt");
             if(!file.exists()){
                 file.createNewFile();
             }
-            BufferedWriter escritor = new BufferedWriter(new FileWriter("Lab 6/src/usuariopendientes.txt"));
+            BufferedWriter escritor = new BufferedWriter(new FileWriter("Lab6/src/usuariopendientes.txt"));
             int con = 0;
             int temp = registro.size();
             while (con < temp){
@@ -46,11 +46,11 @@ public class TurnoUsuario {
 
         //Segunda parte
         try {
-            File file = new File("Lab 6/src/usuariosatendidos.txt");
+            File file = new File("Lab6/src/usuariosatendidos.txt");
             if(!file.exists()){
                 file.createNewFile();
             }
-            BufferedWriter escritor1 = new BufferedWriter(new FileWriter("Lab 6/src/usuariosatendidos.txt"));
+            BufferedWriter escritor1 = new BufferedWriter(new FileWriter("Lab6/src/usuariosatendidos.txt"));
             int a = 0;
             int temp1 = usuarioAtendido.size();
             while (a < temp1){
