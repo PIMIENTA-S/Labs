@@ -1,3 +1,3 @@
-public class Agenda {
+public class palindromos {
     
 }
