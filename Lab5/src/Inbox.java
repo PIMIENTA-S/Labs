@@ -18,7 +18,7 @@ public class Inbox {
 
     public static void mostrarBandejaEntrada(String c) {
         Scanner scanner = new Scanner(System.in);
-        String addTxt = "Lab 5/Emails/" + c + "BA.txt";
+        String addTxt = "Lab5/src/Emails/" + c + "BA.txt";
         System.out.println("\n" + "=".repeat(70));
         System.out.printf("|%-48s|\n", "Bandeja de Entrada");
         System.out.println("=".repeat(70));
@@ -60,7 +60,7 @@ public class Inbox {
         String uno = format.format(date);
         System.out.println(uno);
 
-        String addRuta ="Lab 5/Emails/" +  id + "BA.txt";
+        String addRuta ="Lab5/src/Emails/" +  id + "BA.txt";
 
         String linea = uno + "," + title + "," + redactor + "," + cuerpo;
 
