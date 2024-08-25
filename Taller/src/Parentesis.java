@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Parentesis {
@@ -9,6 +8,7 @@ public class Parentesis {
 
         Stack div = new Stack();
         String[] a = e.split("");
+        int error = 0;
 
 
         for(int i = 0; i < a.length; i++){
@@ -18,9 +18,10 @@ public class Parentesis {
                 if(!div.isEmpty()){
                     div.pop();
                 }
+                error ++;
             }
         }
-        if(div.isEmpty()){
+        if(div.isEmpty() && error == 0){
             System.out.println("Esta completo");
         }else{
             System.out.println("Incompletos");
