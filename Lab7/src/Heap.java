@@ -99,7 +99,8 @@ public class Heap {
     //enqueue caso
     public void MAX_HEAP_INSERT(int[] A, int k){  // O(1)
 
-        int i = A.length + 1;
+        heap_size =+ 1;
+        int i = heap_size;
         A[i] = k;
         while(i > 0 && A[Parent(i)] < A[i]){  //O(log n)
             int temp = A[Parent(i)];
