@@ -1,10 +1,11 @@
 public class Heap {
 
-    private Object[] A;
-    private int heap_size;
+
+    public int[] A;
+    public int heap_size;
 
     public Heap(int capacity){
-        A = new Object[capacity];
+        A = new int[capacity];
         heap_size = 0;
 
     }
@@ -99,8 +100,10 @@ public class Heap {
     //enqueue caso
     public void MAX_HEAP_INSERT(int[] A, int k){  // O(1)
 
-        heap_size =+ 1;
-        int i = heap_size;
+        heap_size = A.length;
+        heap_size++;
+
+        int i = heap_size - 1;
         A[i] = k;
         while(i > 0 && A[Parent(i)] < A[i]){  //O(log n)
             int temp = A[Parent(i)];
