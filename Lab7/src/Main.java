@@ -5,12 +5,12 @@ public class Main {
 
         System.out.println("Mapa");
 
-        Heap heap = new Heap(11);
-        int[] A = {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
+        Heap heap = new Heap(10);
+        int[] A = {16,4,10,14,7,9,3,2,8,1};
 
         System.out.println("Arreglo inicial: " + Arrays.toString(A));
 
-        heap.MAX_HEAPIFY(A,0, A.length);
+        heap.MAX_HEAPIFY(A,3, A.length);
         System.out.println("Arreglo con max_heapify: " + Arrays.toString(A));
 
         heap.BUILD_MAX_HEAP(A);
