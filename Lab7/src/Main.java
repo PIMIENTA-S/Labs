@@ -10,7 +10,6 @@ public class Main {
 
         System.out.println("Arreglo inicial: " + Arrays.toString(A));
 
-        heap.MAX_HEAPIFY(A,3, A.length);
         System.out.println("Arreglo con max_heapify: " + Arrays.toString(A));
 
         heap.BUILD_MAX_HEAP(A);
