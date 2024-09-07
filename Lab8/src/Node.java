@@ -1,43 +1,41 @@
-public class DoubleNode{
+public class Node {
     private Object data ;
-    private DoubleNode next ;
-    private DoubleNode prev ;
+    private Node left ;
+    private Node right ;
 
-    public DoubleNode(){
+    public Node(){
         data = null ;
-        next = null ;
-        prev = null ;
+        left = null ;
+        right = null ;
     }
 
-    public DoubleNode(Object d){
+    public Node(Object d){
         data = d ;
-        next = null ;
-        prev = null ;
-    }
-    
-    public void setData(Object d){
-        data = d ;
+        left = null ;
+        right = null ;
     }
 
-    public void setNext(DoubleNode n){
-        next = n ;
+    public Object getData() {
+        return data;
     }
 
-    public void setPrev(DoubleNode p){
-        prev = p ;
+    public void setData(Object data) {
+        this.data = data;
     }
 
-    public Object getData(){
-        return data ;
+    public Node getRight() {
+        return right;
     }
 
-    public DoubleNode getNext(){
-        return next ;
+    public void setRight(Node right) {
+        this.right = right;
     }
 
-    public DoubleNode getPrev(){
-        return prev ; 
+    public Node getLeft() {
+        return left;
     }
 
-    
+    public void setLeft(Node left) {
+        this.left = left;
+    }
 }
