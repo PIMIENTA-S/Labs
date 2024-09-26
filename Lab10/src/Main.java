@@ -69,6 +69,7 @@ class Grafo {
                 new Result(distancias.get(destino), camino) : new Result(null, null);
     }
 
+
     public void listarConexiones() {
         System.out.println("Conexiones disponibles:");
         for (String ciudadA : adjacencia.keySet()) {
@@ -137,7 +138,7 @@ public class Main {
         return grafo;
     }
     public static void main(String[] args) throws IOException {
-        Grafo grafo = cargarGrafo("Datos vias Colombia.csv");
+        Grafo grafo = cargarGrafo("Lab10/Datos vias Colombia.csv");
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -219,5 +220,4 @@ public class Main {
 
         scanner.close();
     }
-}
 }
